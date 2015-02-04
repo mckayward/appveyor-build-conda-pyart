@@ -1,4 +1,7 @@
 environment:
+    
+  binstar_token:
+    secure: 41BC2SiRXoSRC9MrwCPC/yH9oKZQAF7QSd5Zfkb70bPYs3lYVm2KMs0hOfP36LlB
 
   global:
     # SDK v7.0 MSVC Express 2008's SetEnv.cmd script will fail if the
@@ -14,23 +17,15 @@ environment:
       CONDA_NPY: "18"
 
 install:
-  # this installs the appropriate Miniconda (Py2/Py3, 32/64 bit),
-  # as well as pip, conda-build, and the binstar CLI
+  # install the appropriate Miniconda (Py2/Py3, 32/64 bit),
+  # as well as conda-build and the binstar CLI
   - powershell .\\install.ps1
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
 
 build: false
 
 test_script:
-  # Build and test the package. This appears(?) to sporadically fail due to a 
-  # bug in conda-build on 32 bit python.
-  # https://github.com/conda/conda-build/issues/152
-  #
-  # Note also that our setup.py script, which is called by conda-build, writes
-  # a __conda_version__.txt file, so the version number on the binary package
-  # is set dynamically. This unfortunately mean that conda build --output
-  # doesn't really work.
-  #
+  # Build and test the package.
   - "%CMD_IN_ENV% conda build conda-recipe --quiet"
   # Move the conda package into the current directory, to register it
   # as an "artifact" for Appveyor. cmd.exe does't have good globbing, so
@@ -45,4 +40,4 @@ on_success:
   # Upload built binaries to binstar.org. The globbing and handling of the
   # exit-status code is tricky in cmd.exe or powershell, so we're just using
   # a python script.
-  #- python binstar-push.py
+  - python binstar-push.py
