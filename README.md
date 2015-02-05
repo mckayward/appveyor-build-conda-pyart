@@ -5,7 +5,7 @@ Project for building and uploading Py-ART conda packages for Windows using
 appveyor.
 
 Currently building Py-ART for Python 2.7 on 32 and 64 bit Windows against
-NumPy versions 1.7, 1.8, and 1.9.
+NumPy versions 1.8 and 1.9.
 
 Credits
 -------
