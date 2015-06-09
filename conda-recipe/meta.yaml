@@ -10,6 +10,9 @@ source:
 build:
     number: 0
 
+patches:
+    - map_setup.patch
+
 requirements:
     build:
         - python
