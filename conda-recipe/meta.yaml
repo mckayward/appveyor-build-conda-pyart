@@ -9,6 +9,7 @@ source:
 
     patches:
       - map_setup.patch
+      - gate_to_grid_map_c.patch
 
 build:
     number: 0
