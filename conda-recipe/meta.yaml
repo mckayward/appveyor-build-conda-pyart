@@ -7,11 +7,12 @@ source:
     url: https://pypi.python.org/packages/source/a/arm_pyart/arm_pyart-1.4.0.tar.gz
     md5: d92af9338a0f2ede53f6e2dc22492083
 
+    patches:
+      - map_setup.patch
+
 build:
     number: 0
 
-patches:
-    - map_setup.patch
 
 requirements:
     build:
