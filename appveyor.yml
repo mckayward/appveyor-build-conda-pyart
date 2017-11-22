@@ -30,7 +30,7 @@ install:
 
 build: false
 
-test_script:
+build_script:
   # Build and test the package.
   - "%CMD_IN_ENV% conda build conda-recipe --quiet"
   # Move the conda package into the current directory, to register it
