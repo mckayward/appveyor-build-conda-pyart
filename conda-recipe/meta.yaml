@@ -65,6 +65,7 @@ test:
   requires:
     - mock >=1.0.1
     - nose >=1.0
+    - tabulate >=0.7.7
 
 about:
   home: https://github.com/floydhub/floyd-cli
