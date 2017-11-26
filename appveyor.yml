@@ -32,11 +32,12 @@ build: false
 
 build_script:
   # Build and test the package.
-  - "%CMD_IN_ENV% conda build conda-recipe --quiet"
+  - "%CMD_IN_ENV% conda skeleton pypi --recursive floyd-cli"
+  - "%CMD_IN_ENV% conda build floyd-cli"
   # Move the conda package into the current directory, to register it
   # as an "artifact" for Appveyor. cmd.exe does't have good globbing, so
   # we'll use a simple python script.
-  - python move-conda-package.py conda-recipe
+  # - python move-conda-package.py conda-recipe
 
 artifacts:
   # Archive the generated conda package in the ci.appveyor.com build report.
