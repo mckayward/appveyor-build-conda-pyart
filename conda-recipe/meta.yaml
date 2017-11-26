@@ -37,6 +37,7 @@ requirements:
     - nose >=1.0
   run:
     - python
+    - setuptools
     - click >=6.7
     - clint >=0.5.1
     - requests >=2.12.4
@@ -64,7 +65,6 @@ test:
   requires:
     - mock >=1.0.1
     - nose >=1.0
-    - tabulate >=0.7.7
 
 about:
   home: https://github.com/floydhub/floyd-cli
