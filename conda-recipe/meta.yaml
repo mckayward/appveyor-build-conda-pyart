@@ -48,6 +48,8 @@ requirements:
     - raven
     - mock >=1.0.1
     - nose >=1.0
+  install:
+    - tabulate >=0.7.7
 
 test:
   imports:
