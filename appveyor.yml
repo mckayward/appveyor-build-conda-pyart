@@ -33,7 +33,7 @@ build: false
 build_script:
   # Build and test the package.
   - "%CMD_IN_ENV% conda config --add channels conda-forge"
-  - "%CMD_IN_ENV% conda build conda-recipe --single-version-externally-managed --record=record.txt"
+  - "%CMD_IN_ENV% conda build conda-recipe"
   # Move the conda package into the current directory, to register it
   # as an "artifact" for Appveyor. cmd.exe does't have good globbing, so
   # we'll use a simple python script.
