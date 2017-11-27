@@ -9,7 +9,6 @@ package:
   version: '{{ version }}'
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
   git_url: https://github.com/dfasdf/floyd-cli.git
   '{{ hash_type }}': '{{ hash_value }}'
 
