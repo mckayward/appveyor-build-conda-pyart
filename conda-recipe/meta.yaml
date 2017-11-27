@@ -3,7 +3,7 @@ package:
   version: '0.10.18'
 
 source:
-  url: https://github.com/floydhub/floyd-cli
+  git_url: https://github.com/floydhub/floyd-cli.git
 
 build:
   number: 0
