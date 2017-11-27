@@ -33,8 +33,8 @@ build: false
 build_script:
   # Build and test the package.
   - "%CMD_IN_ENV% conda config --add channels conda-forge"
-  - "%CMD_IN_ENV% conda update conda"
-  - "%CMD_IN_ENV% conda install tabulate"
+  - "%CMD_IN_ENV% conda update -y conda"
+  - "%CMD_IN_ENV% conda install -y tabulate"
   - "%CMD_IN_ENV% conda build -c conda-forge conda-recipe"
   # Move the conda package into the current directory, to register it
   # as an "artifact" for Appveyor. cmd.exe does't have good globbing, so
