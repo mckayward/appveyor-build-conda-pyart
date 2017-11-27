@@ -1,16 +1,9 @@
-{% set name = "floyd-cli" %}
-{% set version = "0.10.18" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "945d52a861638ae20b8096b25d21613a3f32fae8ee6d21260d75d86e47a0b049" %}
-
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: 'floyd-cli'
+  version: '0.10.18'
 
 source:
   git_url: https://github.com/dfasdf/floyd-cli.git
-  '{{ hash_type }}': '{{ hash_value }}'
 
 build:
   number: 0
@@ -47,8 +40,6 @@ requirements:
     - raven
     - mock >=1.0.1
     - nose >=1.0
-  install:
-    - tabulate >=0.7.7
 
 test:
   imports:
@@ -65,7 +56,6 @@ test:
   requires:
     - mock >=1.0.1
     - nose >=1.0
-    - tabulate >=0.7.7
 
 about:
   home: https://github.com/floydhub/floyd-cli
