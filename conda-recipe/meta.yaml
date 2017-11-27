@@ -3,7 +3,7 @@ package:
   version: '0.10.18'
 
 source:
-  git_url: https://github.com/mckayward/floyd-cli.git
+  url: https://github.com/floydhub/floyd-cli
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - python
+    - setuptools
     - click >=6.7
     - clint >=0.5.1
     - requests >=2.12.4
@@ -25,8 +26,7 @@ requirements:
     - tabulate >=0.7.7
     - pathlib2 >=2.2.1
     - raven
-    - mock >=1.0.1
-    - nose >=1.0
+    - nose
   run:
     - python
     - click >=6.7
@@ -38,8 +38,7 @@ requirements:
     - tabulate >=0.7.7
     - pathlib2 >=2.2.1
     - raven
-    - mock >=1.0.1
-    - nose >=1.0
+    - nose
 
 test:
   imports:
